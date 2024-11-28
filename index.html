@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOT INTELLIGENT MIASA HO ANAO</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: #ffffff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background-color: #1e1e1e;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #00b3b3;
+        }
+        .button {
+            background-color: #0059b3;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        textarea, input[type="text"], input[type="file"], input[type="email"] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Varotra Robot Deriv</h1>
+</header>
+
+<div class="container">
+
+    <!-- Existing content: Home Section -->
+    <div class="section">
+        <h2>Lisitry ny Robot Deriv</h2>
+        <button class="button" onclick="showPaymentOptions(1)">HIVIDY Robot Niveau 1 - 5000 Ar</button><br><br>
+        <button class="button" onclick="showPaymentOptions(2)">HIVIDY Robot Niveau 2 - 10,000 Ar</button><br><br>
+        <button class="button" onclick="showPaymentOptions(3)">HIVIDY Robot Niveau 3 - 20,000 Ar</button><br><br>
+    </div>
+
+    <div id="payment-options" class="section" style="display:none;">
+        <h2>Safidio ny Moyen de Paiement</h2>
+        <button class="button" onclick="showMobileMoney()">Mobile Money</button><br><br>
+        <button class="button" onclick="showPayeer()">Payeer</button><br><br>
+    </div>
+
+    <div id="mobile-money" class="section" style="display:none;">
+        <h2>Fandoavana amin'ny Mobile Money</h2>
+        <ul>
+            <li>0323911654</li>
+            <li>0333635111</li>
+            <li>0384557584</li>
+        </ul>
+    </div>
+
+    <div id="payeer" class="section" style="display:none;">
+        <h2>Fandoavana amin'ny Payeer</h2>
+        <p>Compte Payeer: P1114188343</p>
+    </div>
+
+    <!-- Section: Proof of Payment -->
+    <div class="section">
+        <h2>Proof of Payment</h2>
+        <p>Afaka mandefa ny preuve du paiment nataonao eto ambany:</p>
+        <form>
+            <input type="file" name="proof" required>
+            <button class="button" type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- Section: Information about the Robot -->
+    <div class="section">
+        <h2>About the Deriv Robot</h2>
+        <p>
+            Ny **Deriv Robot** dia fitaovana manampy anao amin'ny varotra automatique amin'ny sehatra Deriv. Tombony lehibe amin'ny fampiasana ny robot:
+        </p>
+        <ul>
+            <li>Manampy anao hanatsara ny fahazoam-bola amin'ny alalan'ny algorithm mahomby.</li>
+            <li>Mitsitsy fotoana, satria mandeha ho azy ny varotra.</li>
+            <li>Miaraka amin'ny safidy maromaro, misy ny robot mety ho anao na inona na inona ny fahafahanao ara-bola.</li>
+        </ul>
+    </div>
+
+    <!-- Section: Contact Us -->
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>Afaka mandefa hafatra mivantana aminay eto:</p>
+        <form>
+            <input type="text" name="name" placeholder="Anaranao" required>
+            <input type="email" name="email" placeholder="Adiresy Email" required>
+            <textarea name="message" placeholder="Hafatra" rows="5" required></textarea>
+            <button class="button" type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- Section: Payment History -->
+    <div class="section">
+        <h2>Historique du Paiment</h2>
+        <p>Ireto ny lisitry ny fandoavam-bola nataon'ny mpanjifa:</p>
+        <ul>
+            <li>John Doe - Robot Niveau 1 - 5000 Ar</li>
+            <li>Jane Smith - Robot Niveau 2 - 10,000 Ar</li>
+            <li>Mark Johnson - Robot Niveau 3 - 20,000 Ar</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    function showPaymentOptions(robotLevel) {
+        document.getElementById('payment-options').style.display = 'block';
+    }
+    function showMobileMoney() {
+        document.getElementById('mobile-money').style.display = 'block';
+        document.getElementById('payeer').style.display = 'none';
+    }
+    function showPayeer() {
+        document.getElementById('mobile-money').style.display = 'none';
+        document.getElementById('payeer').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
